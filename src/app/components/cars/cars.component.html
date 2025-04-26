@@ -1,1 +1,29 @@
-<p>cars works!</p>
+<app-car></app-car>
+
+<div class="container bg-light">
+    <h3>Carros Cadastrados:</h3>
+
+    <table class="table table-light">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Montadora</th>
+                <th>Preço</th>
+                <th>Ano</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let car of cars"> 
+                <th>{{car.id}}</th>
+                <th>{{car.name}}</th>
+                <th>{{car.automaker}}</th>
+                <th>{{car.price}}</th>
+                <th>{{car.year}}</th>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>
