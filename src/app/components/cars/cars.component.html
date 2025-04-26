@@ -11,6 +11,7 @@
                 <th>Montadora</th>
                 <th>Preço</th>
                 <th>Ano</th>
+                <th class="text-end">Opções</th>
             </tr>
         </thead>
 
@@ -21,6 +22,10 @@
                 <th>{{car.automaker}}</th>
                 <th>{{car.price}}</th>
                 <th>{{car.year}}</th>
+                <td class="text-end">
+                    <button class="btn btn-success me-2">Alterar</button>
+                    <button class="btn btn-danger">Remover</button>
+                </td>
             </tr>
         </tbody>
 
