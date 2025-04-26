@@ -10,6 +10,9 @@ import { Car } from '../../car';
 export class CarsComponent {
   car : Car = {} as Car;
 
+  isUpdate : boolean = false;
+  idCount : number = 2;
+
   cars: Car[] = [
     {
       id: 1,
@@ -18,5 +21,25 @@ export class CarsComponent {
       price: 11.811,
       year: 2000
     }
-  ]
+  ];
+
+  saveCar(){
+    if(!this.isUpdate){
+      this.car.id = this.idCount;
+      this.idCount++;
+      this.cars.push(this.car);
+    }
+
+    this.car = {} as Car;
+    this.isUpdate = false;
+  }
+
+  update(updateCar:Car){
+    this.car = updateCar;
+    this.isUpdate = true;
+  }
+
+  remove(removeCar:Car){
+    this.cars = this.cars.filter( c => c!== removeCar);
+  }
 }

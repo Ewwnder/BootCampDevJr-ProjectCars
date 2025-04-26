@@ -8,7 +8,7 @@
           <label for="name" class="col-form-label">Nome:</label>
         </div>
         <div class="col">
-          <input type="text" class="form-control" id="name" name="name" required>
+          <input type="text" class="form-control" [(ngModel)]="car.name" id="name" name="name" required>
         </div>
       </div>
 
@@ -17,7 +17,7 @@
           <label for="automaker" class="col-form-label">Montadora:</label>
         </div>
         <div class="col">
-          <input type="text" class="form-control" id="automaker" name="automaker" required>
+          <input type="text" class="form-control" [(ngModel)]="car.automaker" id="automaker" name="automaker" required>
         </div>
       </div>
 
@@ -26,20 +26,20 @@
           <label for="price" class="col-form-label">Preço:</label>
         </div>
         <div class="col">
-          <input type="text" class="form-control" id="price" name="price" required>
+          <input type="text" class="form-control" [(ngModel)]="car.price"  id="price" name="price" required>
         </div>
   
         <div class="col-3">
           <label for="year" class="col-form-label">Ano:</label>
         </div>
         <div class="col">
-          <input type="text" class="form-control" id="year" name="year" required>
+          <input type="text" class="form-control" [(ngModel)]="car.year" id="year" name="year" required>
         </div>
       </div>
   
       <div class="row">
         <div>
-          <button class="btn btn-primary"  [disabled]="formCar.invalid">Salvar</button>
+          <button class="btn btn-primary" (click)="save()" [disabled]="formCar.invalid">Salvar</button>
         </div>
       </div>
     </form>
